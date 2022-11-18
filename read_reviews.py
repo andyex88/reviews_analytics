@@ -7,5 +7,10 @@ with open('reviews.txt', 'r') as f:
 		if count % 1000 == 0:
 		    print(len(data))
 
-print(len(data))
-print(data[0])
+print('This file has', len(data), 'data sets')
+
+sum_len = 0
+for d in data:
+	sum_len = sum_len + len(d)
+
+print('The average length of comments is', sum_len/len(data))
