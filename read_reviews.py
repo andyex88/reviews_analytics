@@ -23,3 +23,10 @@ for d in data:
 print('We have', len(new), 'reviews that have less than 100 words')
 print(new[0])
 print(new[1])
+
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+print('It have', len(good), 'reviews that have mentioned \'good\'')
+print(good[0])
