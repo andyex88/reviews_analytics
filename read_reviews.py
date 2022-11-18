@@ -14,3 +14,12 @@ for d in data:
 	sum_len = sum_len + len(d)
 
 print('The average length of comments is', sum_len/len(data))
+
+
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('We have', len(new), 'reviews that have less than 100 words')
+print(new[0])
+print(new[1])
