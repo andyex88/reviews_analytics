@@ -30,3 +30,35 @@ for d in data:
 		good.append(d)
 print('It have', len(good), 'reviews that have mentioned \'good\'')
 print(good[0])
+
+
+#print(data[0])
+
+# Word counting function 
+wc = {} # word_count
+for d in data:
+	words = d.split()
+	for word in words:
+		if word in wc:
+			wc[word] += 1
+		else:
+			wc[word] = 1 # add new key to wc dictionary
+
+for word in wc:
+	if wc[word] > 1000000:
+		print(word, wc[word])
+
+print(len(wc))
+print(wc['Andy'])
+
+while True:
+	word = input('Please enter the word you want to search: ')
+	if word == 'q':
+		break
+	if word in wc:
+		print(word, 'shows', wc[word], 'times')
+	else:
+		print('No such word!')
+
+print('Thanks for using this tool!')
+
